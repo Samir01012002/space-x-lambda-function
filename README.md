@@ -26,22 +26,15 @@ $ py test.py
 
 ### Ejecución manual de la función lambda
 
-Ya teniendo configurado todo es momento de probar la función primero vamos a hacer una modificación en el archivo **lambda_function.py** debemos colocar al final del archivo lo siguiente:
+Para traer el contador de los registros almacenados en **DynamoDB** debe ejecutar el siguiente comando:
 
 ```bash
-print(lambda_handler({"manual": True, "count": True}, False))
+$ py count.py
 ```
-Esto le devolvería la cuenta de los registros cargados en **DynamoDB**. Tambien puede cargar los datos manualmente colocando lo siguiente en lugar de lo anterior:
+Para cargar la información de **SpaceX** en **DynamoDB** debe ejecutar el siguiente comando:
 
 ```bash
-print(lambda_handler({"manual": True, "count": False}, False))
+$ py load.py
 ```
 
-Y luego debe escribir el siguiente comando para su ejecución:
-
-
-```bash
-$ py lambda_function.py
-```
-
-La respuesta de esta se mostrará en consola.
+La respuesta de estos comandos se mostrarán en consola.
